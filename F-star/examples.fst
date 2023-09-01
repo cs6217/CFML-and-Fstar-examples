@@ -1,4 +1,4 @@
-module Effects
+module Examples
 
 open FStar.Heap
 open FStar.ST
