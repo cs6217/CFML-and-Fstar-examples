@@ -4,7 +4,9 @@
     Counter VerifyCounter
     Refs VerifyRefs
     List_set_at_ind_new Verify_list_set_at_ind_new
-    Seq_to_array_old Verify_seq_to_array_old))
+    Seq_to_array_old Verify_seq_to_array_old
+    MinMaxPlus VerifyMinMaxPlus
+    ))
 
 
 (rule
@@ -33,4 +35,9 @@
  (action (run cfmlc -o ./Counter.v ../lib/counter.ml))
 )
 
+(rule
+ (target MinMaxPlus.v)
+ (deps ../lib/min_max_plus.ml)
+ (action (run cfmlc -o ./MinMaxPlus.v ../lib/min_max_plus.ml))
+)
 
